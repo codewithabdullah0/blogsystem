@@ -1,9 +1,9 @@
-import express from 'express';
+const express = require( 'express');
 
-import { getPosts, getPostsBySearch, getPost, createPost, updatePost, likePost, deletePost } from '../controllers/posts.js';
+const { getPosts, getPostsBySearch, getPost, createPost, updatePost, likePost, deletePost } = require( '../controllers/posts.js');
 
 const router = express.Router();
-import auth from "../middleware/auth.js";
+const auth = require( "../middleware/auth.js");
 
 router.get('/search', getPostsBySearch);
 router.get('/', getPosts);

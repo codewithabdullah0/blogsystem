@@ -1,11 +1,11 @@
 
-import express from 'express';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
+const express = require( 'express');
+const bodyParser = require( 'body-parser');
+const mongoose = require( 'mongoose');
+const cors = require( 'cors');
 
-import postRoutes from './routes/posts.js';
-import userRouter from "./routes/user.js";
+const postRoutes = require( './routes/posts.js');
+const userRouter = require( "./routes/user.js");
 
 const app = express();
 
