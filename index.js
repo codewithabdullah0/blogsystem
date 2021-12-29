@@ -16,13 +16,6 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("client/build"));
-  const path = require("path");
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
 
 const CONNECTION_URL = "mongodb+srv://mrkaptan:NOTHINGABDULLAH123786@cluster0.ndavu.mongodb.net/MERNBlog?retryWrites=true&w=majority";
 const PORT = process.env.PORT|| 5000;
